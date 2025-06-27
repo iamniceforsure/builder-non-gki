@@ -6,7 +6,7 @@
     "defconfig": "rosemary_defconfig", 
     "extraConfig": "", 
     "repo": "https://github.com/gabutgadungan/android_kernel_xiaomi_rosemary", 
-    "branch": "ksu-type-root-impl" 
+    "branch": "rosemary-13" 
   },
   "use_dtb": false,
   "kp": {
