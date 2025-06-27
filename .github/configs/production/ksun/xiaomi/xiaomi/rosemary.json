@@ -1,6 +1,6 @@
 {
   "kernelSource": {
-    "device": "rosemary", // device codename
+    "device": "rosemary"
     "vendor": "xiaomi", // device manufacture
     "name": "test-kernelsu-next", // type whatever you want here
     "defconfig": "rosemary_defconfig", // the defconfig name in arch/arm64/configs folder. Choose the one have your device codename
