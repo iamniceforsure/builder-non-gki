@@ -57,11 +57,11 @@
     "use": true, 
     "imageUrl": "https://github.com/kernel-build-from-rainyland/kernel_xiaomi_ruby/releases/download/cloud/boot.img",
     "imageName": "boot.img"
-  },
+    },
   "AnyKernel3": {
-    "use": disable,
+    "use": false, // 
     "release": true,
     "repo": "https://github.com/kernel-build-from-rainyland/AnyKernel3", 
-    "branch": "rosemary" 
+    "branch": "ruby" 
   }
 }
