@@ -1,67 +1,67 @@
 {
   "kernelSource": {
     "device": "rosemary"
-    "vendor": "xiaomi", // device manufacture
-    "name": "test-kernelsu-next", // type whatever you want here
-    "defconfig": "rosemary_defconfig", // the defconfig name in arch/arm64/configs folder. Choose the one have your device codename
-    "extraConfig": "", // leave this empty if you dont have any extra config file like vendor/venus_QGKI.config
-    "repo": "https://github.com/gabutgadungan/android_kernel_xiaomi_rosemary, // the kernel source link you forked and modified
-    "branch": "ksu-type-root-impl" // the branch if the kernel source forked and modified. Open kernel source link again and see the button below kernel source name, you will see the branch you modified
+    "vendor": "xiaomi", 
+    "name": "test-kernelsu-next", 
+    "defconfig": "rosemary_defconfig", 
+    "extraConfig": "", 
+    "repo": "https://github.com/gabutgadungan/android_kernel_xiaomi_rosemary, 
+    "branch": "ksu-type-root-impl" 
   },
   "use_dtb": false,
   "kp": {
-    "use": false, // If you don't use kernel patch (APatch) leave this alone
-    "kpimg_link": "" // If you don't use kernel patch (APatch) leave this alone
+    "use": false, 
+    "kpimg_link": "" 
   }, 
   "kernelsu": {
-    "enable": true, // If you don't use ksu, set to false
-    "setupLink": "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/next/kernel/setup.sh", // The setup link of ksu, check the manual in their repo
-    "setupArg": "next", // The setup branch of ksu, check the manual in their repo
-    "setupName": "KernelSU-Next", // The setup folder name of ksu, it will be the same as repo. Except SukiSU-Ultra will be KernelSU
-    "needPatch": true, // If you need to susfs enable patch for using. Some root solution won't need this 
-    "susfsLink": "https://raw.githubusercontent.com/wodanesdag/susfs4ksu/refs/heads/next-4.19/kernel_patches/KernelSU/10_enable_susfs_for_ksu.patch" // Patch link
+    "enable": true, 
+    "setupLink": "https://raw.githubusercontent.com/KernelSU-Next/KernelSU-Next/next/kernel/setup.sh", 
+    "setupArg": "next", 
+    "setupName": "KernelSU-Next", 
+    "needPatch": true, 
+    "susfsLink": "https://raw.githubusercontent.com/wodanesdag/susfs4ksu/refs/heads/next-4.19/kernel_patches/KernelSU/10_enable_susfs_for_ksu.patch"
   },
   "toolchains": [
     {
-      "url": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r547379.tar.gz", // Don't touch this if you don't know what are you doing
-      "branch": "15.0", // Don't touch this if you don't know what are you doing
-      "name": "clang-AOSP", // Don't touch this if you don't know what are you doing
-      "binPath": ["./bin"] // Don't touch this if you don't know what are you doing
+      "url": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r547379.tar.gz", 
+      "branch": "15.0", 
+      "name": "clang-AOSP", 
+      "binPath": ["./bin"] 
     }
   ],
-  "ccache": true, // Don't touch this if you don't know what are you doing
+  "ccache": true,
   "params": {
-    "ARCH": "arm64", // Your device arch, it can be arm or arm64. But mostly in arm64 today
-    "CC": "clang-AOSP/bin/clang",  // Don't touch this if you don't know what are you doing
+    "ARCH": "arm64", 
+    "CC": "clang-AOSP/bin/clang",  
     "externalCommand": {
-      "KBUILD_BUILD_HOST": "perfc.org", // Your name. Can be whatever you want here. You will see in the kernel info is <yourname>@<yourhost>
-      "KBUILD_BUILD_USER": "rainyxeon", // Your host. Can be whatever you want here. You will see in the kernel info is <yourname>@<yourhost>
-      "CROSS_COMPILE": "clang-AOSP/bin/aarch64-linux-gnu-", // Don't touch this if you don't know what are you doing
-      "CROSS_COMPILE_ARM32": "clang-AOSP/bin/arm-linux-gnueabi-", // Don't touch this if you don't know what are you doing
-      "LD": "clang-AOSP/bin/ld.lld", // Don't touch this if you don't know what are you doing
-      "LLVM": "1", // Don't touch this if you don't know what are you doing
-      "LLVM_IAS": "1", // Don't touch this if you don't know what are you doing
-      "AR": "clang-AOSP/bin/llvm-ar", // Don't touch this if you don't know what are you doing
-      "NM": "clang-AOSP/bin/llvm-nm", // Don't touch this if you don't know what are you doing
-      "OBJCOPY": "clang-AOSP/bin/llvm-objcopy", // Don't touch this if you don't know what are you doing
-      "OBJDUMP": "clang-AOSP/bin/llvm-objdump", // Don't touch this if you don't know what are you doing
-      "READELF": "clang-AOSP/bin/llvm-readelf", // Don't touch this if you don't know what are you doing
-      "OBJSIZE": "clang-AOSP/bin/llvm-size", // Don't touch this if you don't know what are you doing
-      "STRIP": "clang-AOSP/bin/llvm-strip", // Don't touch this if you don't know what are you doing
-      "LDGOLD": "clang-AOSP/bin/aarch64-linux-gnu-ld.gold", // Don't touch this if you don't know what are you doing
-      "LLVM_AR": "clang-AOSP/bin/llvm-ar", // Don't touch this if you don't know what are you doing
-      "LLVM_DIS": "clang-AOSP/bin/llvm-dis" // Don't touch this if you don't know what are you doing
+      "KBUILD_BUILD_HOST": "perfc.org", 
+      "KBUILD_BUILD_USER": "rainyxeon", 
+      "CROSS_COMPILE": "clang-AOSP/bin/aarch64-linux-gnu-", 
+      "CROSS_COMPILE_ARM32": "clang-AOSP/bin/arm-linux-gnueabi-", 
+      "LD": "clang-AOSP/bin/ld.lld", 
+      "LLVM": "1", 
+      "LLVM_IAS": "1",
+      "AR": "clang-AOSP/bin/llvm-ar", 
+      "NM": "clang-AOSP/bin/llvm-nm",
+      "OBJCOPY": "clang-AOSP/bin/llvm-objcopy", 
+      "OBJDUMP": "clang-AOSP/bin/llvm-objdump", 
+      "READELF": "clang-AOSP/bin/llvm-readelf", 
+      "OBJSIZE": "clang-AOSP/bin/llvm-size", 
+      "STRIP": "clang-AOSP/bin/llvm-strip",
+      "LDGOLD": "clang-AOSP/bin/aarch64-linux-gnu-ld.gold", 
+      "LLVM_AR": "clang-AOSP/bin/llvm-ar", 
+      "LLVM_DIS": "clang-AOSP/bin/llvm-dis" 
     }
   },
   "image": {
-    "use": true, // If you don't use boot.img method, disable this
-    "imageUrl": "https://github.com/kernel-build-from-rainyland/kernel_xiaomi_ruby/releases/download/cloud/boot.img", // Link if that boot.img
-    "imageName": "boot.img" // File name of that boot.img
+    "use": true, 
+    "imageUrl": "https://github.com/kernel-build-from-rainyland/kernel_xiaomi_ruby/releases/download/cloud/boot.img",
+    "imageName": "boot.img"
   },
   "AnyKernel3": {
-    "use": enable, // If you use Anykernel method, enable this
+    "use": enable, 
     "release": true,
-    "repo": "https://github.com/kernel-build-from-rainyland/AnyKernel3", // Your anykernel link, just find it somewhere in github. or clone it from https://github.com/kernel-build-from-rainyland/AnyKernel3. delete device.name2=sunny and edit device.name1=mojito to your device codename
-    "branch": "rosemary" // the branch of that anykernel
+    "repo": "https://github.com/kernel-build-from-rainyland/AnyKernel3", 
+    "branch": "rosemary" 
   }
 }
