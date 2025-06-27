@@ -1,11 +1,11 @@
 {
   "kernelSource": {
-    "device": "rosemary"
+    "device": "rosemary",
     "vendor": "xiaomi", 
     "name": "test-kernelsu-next", 
     "defconfig": "rosemary_defconfig", 
     "extraConfig": "", 
-    "repo": "https://github.com/gabutgadungan/android_kernel_xiaomi_rosemary, 
+    "repo": "https://github.com/gabutgadungan/android_kernel_xiaomi_rosemary", 
     "branch": "ksu-type-root-impl" 
   },
   "use_dtb": false,
