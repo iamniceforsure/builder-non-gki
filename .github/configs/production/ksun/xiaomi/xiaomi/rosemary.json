@@ -59,7 +59,7 @@
     "imageName": "boot.img"
   },
   "AnyKernel3": {
-    "use": enable, 
+    "use": enable,
     "release": true,
     "repo": "https://github.com/kernel-build-from-rainyland/AnyKernel3", 
     "branch": "rosemary" 
