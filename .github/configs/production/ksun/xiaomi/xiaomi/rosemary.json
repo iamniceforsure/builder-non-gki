@@ -5,8 +5,8 @@
     "name": "test-kernelsu-next", 
     "defconfig": "rosemary_defconfig", 
     "extraConfig": "", 
-    "repo": "https://github.com/gabutgadungan/android_kernel_xiaomi_rosemary", 
-    "branch": "rosemary-13" 
+    "repo": "https://github.com/heyradrepo/kernel_xiaomi_rosemary", 
+    "branch": "udc" 
   },
   "use_dtb": false,
   "kp": {
@@ -19,7 +19,7 @@
     "setupArg": "next", 
     "setupName": "KernelSU-Next", 
     "needPatch": true, 
-    "susfsLink": "https://raw.githubusercontent.com/wodanesdag/susfs4ksu/refs/heads/next-4.19/kernel_patches/KernelSU/10_enable_susfs_for_ksu.patch"
+    "susfsLink": "https://raw.githubusercontent.com/wodanesdag/susfs4ksu/refs/heads/next-4.14/kernel_patches/KernelSU/10_enable_susfs_for_ksu.patch"
   },
   "toolchains": [
     {
@@ -54,7 +54,7 @@
     }
   },
   "image": {
-    "use": true, 
+    "use": false, 
     "imageUrl": "https://github.com/kernel-build-from-rainyland/kernel_xiaomi_ruby/releases/download/cloud/boot.img",
     "imageName": "boot.img"
     },
